@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+     href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'
+      rel="stylesheet"
+    />
+    <!-- <link rel="stylesheet" type="text/css" href="/public/css/submission.css"> -->
+    <title>Submit</title>
+    <style>
+      body{
+    font-family: Poppins;
+    min-height: 100vh;
+    background:  #80CAF3;
+    }
+    .trigger_popup{
+        cursor: pointer;
+        font-size: 20px;
+        text-decoration: none;
+        font-weight: bold;
+        color: white;
+        padding: 20px;
+    }
+    #success_trigger{
+        background: #32ba7c;
+        position: fixed;
+        top:20%;
+        left:20%;
+    }
+    #error_trigger{
+        background: #ff3636;
+        position: fixed;
+        top:20%;
+        left:60%;
+    }
+
+    #success{
+        display: none;
+        position: fixed;
+        top:20%;
+        left:10%
+    }
+    #error{
+        display: none;
+        position: fixed;
+        top:20%;
+        left:55%;
+    }
+
+    .popup-content{
+      /* display: block; */
+        width: 326px;
+        height: 408px;
+        background: white;
+        box-shadow: 4px 4px 70px 10px rgb(0 0 0/11%);
+        border-radius: 25px;
+    }
+    .imgbox{
+        text-align: center;
+    }
+    .imge{
+        width: 112px;
+        margin-top: 40px;
+    }
+    .title{
+        font-weight: 500;
+        font-size: 24px;
+        letter-spacing: 0.05em;
+        text-align: center;
+        margin: auto;
+    }
+    #success .title{
+        color: #32ba7c;
+    }
+    #error .title{
+        color: #ff3636;
+    }
+    .para{
+        font-weight: 500;
+        width: 80%;
+        font-size: 18px;
+        line-height: 30px;
+        letter-spacing: 0.05em;
+        text-align: center;
+        margin: auto;
+
+
+    }
+    .buttonn{
+        width: 50%;
+        display: block;
+        margin: 20px auto;
+        border-radius: 25px;
+        padding: 10px;
+        text-decoration: none;
+        color: white;
+        text-align: center;
+        letter-spacing: 0.05em;
+    }
+    #s_button{
+        background: #32ba7c;
+    }
+    #e_button{
+        background: #ff3636;
+    }
+    </style>
+  </head>
+  <body>
+    <!-- <a href="#" class="trigger_popup" id="success_trigger">Success</a> -->
+    <div class="popup" id="success">
+      <div class="popup-content">
+        <div class="imgbox">
+          <img src="/public/images/checked.png" alt="" class="imge">
+        </div>
+        <div class="title">
+          <h3>Success!</h3>
+        </div>
+        <p class="para">Your mail has been sent successfully</p>
+        <form action="">
+          <!-- <a href="#" class="buttonn" id="s_button">OKAY</a> -->
+        </form>
+      </div>
+    </div>
+    <!-- <script src="/public/js/submission.js"></script> -->
+    <script>
+      var success_popup=document.getElementById("success");
+      var error_popup =document.getElementById("error");
+      var s_close=document.getElementById("s_button");
+      var e_close=document.getElementById("e_button");
+      var s_btn =document.getElementById("success_trigger");
+      var e_btn=document.getElementById("error_trigger");
+      s_btn.onclick=function(){
+          success_popup.style.display ="block";
+
+      }
+      e_btn.onclick =function(){
+          error_popup.style.display="block";
+      }
+      s_close.onclick =function(){
+          success_popup.style.display="none";
+      }
+      e_close.onclick=function(){
+          error_popup.style.display="none";
+      }
+    </script>
+  </body>
+</html>
